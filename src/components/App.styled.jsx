@@ -25,8 +25,10 @@ export const ButtonStyle = styled.button`
   width: 100px;
   padding: 4px;
   font-weight: 500px;
-  background-color: #a2fccb;
+  border-radius: 5px;
+  background-color: #59b2ff;
   &:hover {
-    background-color: #31d37a;
+    background-color: #31a2d3;
+    color: white;
   }
 `;

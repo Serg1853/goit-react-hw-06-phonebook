@@ -1,7 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit';
-import { contactPersistReduser } from './phoneBookSlice';
 import { filterSlice } from './filterSlice';
-
+import { contactsPersistReducer } from './phoneBookSlice';
 import {
   persistStore,
   FLUSH,
@@ -13,9 +12,9 @@ import {
 } from 'redux-persist';
 
 export const store = configureStore({
-  reduser: {
-    phoneBook: contactPersistReduser,
-    filter: filterSlice.reduser,
+  reducer: {
+    phoneBook: contactsPersistReducer,
+    filter: filterSlice.reducer,
   },
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware({

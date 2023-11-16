@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
-import persistReducer from 'redux-persist/es/persistReducer';
-import storage from 'redux-persist/lib/storage';
+import { persistReducer } from 'redux-persist';
+import storage from 'redux-persist/lib/storage'; // defaults to localStorage for web
 
 const contactInitialState = {
   contacts: [
@@ -26,7 +26,7 @@ const phoneBookSlice = createSlice({
   },
 });
 
-export const getPhoneBookValue = state => state.phoneBook.contact;
+export const getPhoneBookValue = state => state.phoneBook.contacts;
 
 export const { addContact, delContact } = phoneBookSlice.actions;
 
@@ -34,7 +34,8 @@ const persistConfig = {
   key: 'contacts',
   storage,
 };
-export const contactPersistReduser = persistReducer(
+
+export const contactsPersistReducer = persistReducer(
   persistConfig,
   phoneBookSlice.reducer
 );
