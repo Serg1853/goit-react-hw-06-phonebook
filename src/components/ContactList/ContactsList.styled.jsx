@@ -5,6 +5,7 @@ export const ContactListStyle = styled.ul`
   border: 1px solid#31b5d3;
   width: 422px;
   border-radius: 5px;
+  box-shadow: 5px 5px 5px grey;
 `;
 
 export const ContactItemStyle = styled.li`

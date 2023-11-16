@@ -18,6 +18,7 @@ export const InputStyle = styled.input`
   padding: 4px;
   width: 200px;
   border-radius: 5px;
+  box-shadow: 2px 2px 2px grey;
 `;
 
 export const ButtonStyle = styled.button`
@@ -27,6 +28,7 @@ export const ButtonStyle = styled.button`
   font-weight: 500px;
   border-radius: 5px;
   background-color: #59b2ff;
+  box-shadow: 5px 5px 5px grey;
   &:hover {
     background-color: #31a2d3;
     color: white;
